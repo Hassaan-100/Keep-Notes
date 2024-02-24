@@ -16,7 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-    origin: ['https://keep-notes-frontend-ten.vercel.app'],
+    origin: ['http://keep-notes-frontend-psi.vercel.app/'],
     methods: ['GET', 'POST']
 }));
 
