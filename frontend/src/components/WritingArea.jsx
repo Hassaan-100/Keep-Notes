@@ -39,7 +39,7 @@ function WritingArea(props){
 
     async function addClick(){
         try{
-             await axios.post("http://localhost:3001/addnote", note);
+             await axios.post("http://keep-notes-env.eba-462p5p2r.us-east-1.elasticbeanstalk.com/addnote", note);
         } catch (err) {
             console.log(err.message)
         }
