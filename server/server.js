@@ -8,6 +8,9 @@ env.config();
 
 const db = new pg.Pool({
     connectionString: process.env.POSTGRES_URL ,
+    ssl:{
+         rejectUnauthorized: false,
+    }
 })
 
 db.connect().then(()=>console.log('connected to database'));
@@ -16,7 +19,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-    origin: ['http://keep-notes-frontend-psi.vercel.app/'],
+    origin: ['https://keep-notes-frontend-psi.vercel.app/'],
     methods: ['GET', 'POST']
 }));
 
