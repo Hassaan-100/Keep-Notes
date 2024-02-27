@@ -16,7 +16,7 @@ const db = new pg.Pool({
 db.connect().then(()=>console.log('connected to database'));
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
 app.use(cors({
     origin: ['https://keep-notes-frontend-psi.vercel.app/'],
