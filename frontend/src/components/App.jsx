@@ -14,7 +14,7 @@ function App(){
 
     async function getNotes(){
         try{
-            const entries = await axios.get('https://3.80.250.242:5000/getnotes');
+            const entries = await axios.get('http://3.80.250.242:5000/getnotes');
             const parsedEntries = entries.data;
             console.log(parsedEntries);
             setEntry(parsedEntries);
