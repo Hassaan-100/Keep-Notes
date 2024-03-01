@@ -15,11 +15,12 @@ db.connect().then(()=>console.log('connected to database'));
 const app = express();
 const PORT = process.env.PORT;
 
-app.use(cors({
-    origin: ['https://keep-notes-frontend-psi.vercel.app', 'https://keepnotes.hassaandev.site/'],
-    methods: ['GET', 'POST'],
-    credentials: true,
-}));
+// app.use(cors({
+//     origin: ['https://keep-notes-frontend-psi.vercel.app', 'https://keepnotes.hassaandev.site/'],
+//     methods: ['GET', 'POST'],
+//     credentials: true,
+// }));
+app.use(cors());
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true})); 
