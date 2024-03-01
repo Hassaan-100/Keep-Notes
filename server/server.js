@@ -20,7 +20,8 @@ const PORT = process.env.PORT;
 
 app.use(cors({
     origin: ['https://keep-notes-frontend-psi.vercel.app/'],
-    methods: ['GET', 'POST']
+    methods: ['GET', 'POST'],
+    credentials: true,
 }));
 
 app.use(express.static('public'));
