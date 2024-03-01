@@ -6,6 +6,8 @@ import Notes from "./Notes";
 import MyModal from "./MyModal";
 import axios from "axios";
 
+axios.defaults.withCredentials = true;
+
 function App(){
    
     const [entry, setEntry] = useState([]);
