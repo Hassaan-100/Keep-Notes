@@ -14,7 +14,7 @@ function App(){
 
     async function getNotes(){
         try{
-            const entries = await axios.get('http://3.80.250.242:5000/getnotes');
+            const entries = await axios.get('https://keepnotes.hassaandev.site/getnotes');
             const parsedEntries = entries.data;
             console.log(parsedEntries);
             setEntry(parsedEntries);
@@ -41,7 +41,7 @@ function App(){
             });
         });
        try {
-        await axios.post('http://keep-notes-env.eba-462p5p2r.us-east-1.elasticbeanstalk.com/deletenote', {id});
+        await axios.post('https://keepnotes.hassaandev.site/deletenote', {id});
        } catch (err){
         console.error(err.message);
        }
@@ -64,7 +64,7 @@ function App(){
             const {heading, notes} = newNote; // these names should be same as what were passed into here in the object from child. recall, names of fields of objects should be same
             const e_id = editEntry.id;
             console.log(`This is in handleEdit ${heading} ${notes} ${e_id}`)
-            await axios.post('http://keep-notes-env.eba-462p5p2r.us-east-1.elasticbeanstalk.com/editnote', {heading, notes, e_id});
+            await axios.post('https://keepnotes.hassaandev.site/editnote', {heading, notes, e_id});
   
         } catch (error) {
             console.log(error.message)
