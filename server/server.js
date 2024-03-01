@@ -8,9 +8,6 @@ env.config();
 
 const db = new pg.Pool({
     connectionString: process.env.POSTGRES_URL ,
-    ssl:{
-         rejectUnauthorized: false,
-    }
 })
 
 db.connect().then(()=>console.log('connected to database'));
