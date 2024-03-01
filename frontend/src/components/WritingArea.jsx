@@ -19,7 +19,7 @@ const style = {
     boxShadow: '0 3px 3px 0 rgba(113, 111, 111, 1.5)',
 }
 
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 function WritingArea(props){
     const [note, setNote] = useState({
