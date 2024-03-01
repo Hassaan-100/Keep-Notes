@@ -6,7 +6,7 @@ import Notes from "./Notes";
 import MyModal from "./MyModal";
 import axios from "axios";
 
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 function App(){
    
